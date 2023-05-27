@@ -18,7 +18,7 @@ body {
   text-align: center;
 }
 
-h1 {
+h1, h2 {
   color: #fff;
   margin-bottom: 0.5rem;
   font-size: 1.75rem;
