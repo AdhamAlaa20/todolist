@@ -37,25 +37,25 @@ export const TodoWrapper = () => {
     }
 
 
-//   return (
-//     <div className='TodoWrapper'>
-//         <h1>Get Things Done!</h1>
-//         <h2>Hope You Don't Ever Stop Fighting</h2>
+  return (
+    <div className='TodoWrapper'>
+        <h1>Get Things Done!</h1>
+        <h2>Hope You Don't Ever Stop Fighting</h2>
 
-//         <TodoForm   addTodo={addTodo}/>
-//         {todos.map((todo,index) =>(
-//             todo.isEditing? (
-//                 <EditTodoForm />
-//                 ):(
-//             <Todo task={todo} key={index}   
-//             togglecomplete={togglecomplete}
-//             deletTodo={deleteTodo}
-//             editTodo={editTodo}
-//             />))
-//         )}
-//     </div>
-//   )
-// }
+        <TodoForm   addTodo={addTodo}/>
+        {todos.map((todo,index) =>(
+            todo.isEditing? (
+                <EditTodoForm editTodo={editTask} task={todo} />
+                ):(
+            <Todo task={todo} key={index}   
+            togglecomplete={togglecomplete}
+            deletTodo={deleteTodo}
+            editTodo={editTodo}
+            />))
+        )}
+    </div>
+  )
+
 
 
 
@@ -95,24 +95,24 @@ export const TodoWrapper = () => {
 
 
 
-  return (
-    <div className="TodoWrapper">
-      <h1>Get Things Done !</h1>
-      <TodoForm addTodo={addTodo} />
-      {/* display todos */}
-      {todos.map((todo) =>
-        todo.isEditing ? (
-          <EditTodoForm editTodo={editTask} task={todo} />
-        ) : (
-          <Todo
-            key={todo.id}
-            task={todo}
-            deleteTodo={deleteTodo}
-            editTodo={editTodo}
-            toggleComplete={togglecomplete}
-          />
-        )
-      )}
-    </div>
-  );
+//   return (
+//     <div className="TodoWrapper">
+//       <h1>Get Things Done !</h1>
+//       <TodoForm addTodo={addTodo} />
+//       {/* display todos */}
+//       {todos.map((todo) =>
+//         todo.isEditing ? (
+//           <EditTodoForm editTodo={editTask} task={todo} />
+//         ) : (
+//           <Todo
+//             key={todo.id}
+//             task={todo}
+//             deleteTodo={deleteTodo}
+//             editTodo={editTodo}
+//             toggleComplete={togglecomplete}
+//           />
+//         )
+//       )}
+//     </div>
+//   );
 };
